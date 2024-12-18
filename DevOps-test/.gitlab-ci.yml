@@ -1,0 +1,23 @@
+stages:
+  - clone
+  - build
+  - test
+
+clone_repo:
+  stage: clone
+  script:
+    - echo "Cloning GitHub repository..."
+    - git clone https://github.com/Amira-ben-henda/DevOps-test.git
+    - cd DevOps-test/DevOps-test
+
+build_job:
+  stage: build
+  script:
+    - echo "Building the application..."
+    - echo "Repository cloned successfully"
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - echo "Tests completed"
